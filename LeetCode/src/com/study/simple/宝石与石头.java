@@ -35,13 +35,25 @@ public class 宝石与石头  {
         }
         return sum;
     }
+    public int numJewelsInStones1(String J, String S) {
+
+        char[] j1 = J.toCharArray();
+
+        int length  = 0;
+        for (int i=0; i< J.length();i++){
+            String[] ary = ("," + S + ",").split(j1[i] + "");
+
+            length += (ary.length-1);
+        }
+        return length;
+    }
 
     public static void main(String[] args) {
         String J = "aA", S = "aAAbbbb";
 
 
         宝石与石头 aa = new 宝石与石头();
-        System.out.println(aa.numJewelsInStones(J,S));
+        System.out.println(aa.numJewelsInStones1(J,S));
 
     }
 }
