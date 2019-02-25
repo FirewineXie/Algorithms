@@ -26,7 +26,7 @@ public class SortCompare {
         if (alg.equals("Shell")){
             Shell.sort(a);
         }
-        if (alg.equals("Merge")){
+        if (alg.equals("MergeUntil")){
             Merge.sort(a);
         }
         if (alg.equals("Quick")){

@@ -42,7 +42,6 @@ public class 宝石与石头  {
         int length  = 0;
         for (int i=0; i< J.length();i++){
             String[] ary = ("," + S + ",").split(j1[i] + "");
-
             length += (ary.length-1);
         }
         return length;

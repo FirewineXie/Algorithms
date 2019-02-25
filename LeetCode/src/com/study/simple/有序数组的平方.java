@@ -12,54 +12,43 @@ package com.study.simple;
  */
 public class 有序数组的平方 {
 
-    public static void sort(int[] a){
-        if (a.length>0) {
-            sort(a,0,a.length-1);
-        }
 
-    }
-    public static void sort(int[] a,int low,int height){
-        int i=low;
-        int j=height;
-        if (i>j) {    //放在k之前，防止下标越界
-            return;
-        }
-        int k=a[i];
-
-        while (i<j) {
-            while (i<j&&a[j]>k) {    //找出小的数
-                j--;
-            }
-            while (i<j&&a[i]<=k) {  //找出大的数
-                i++;
-            }
-            if(i<j){   //交换
-                int swap=a[i];
-                a[i]=a[j];
-                a[j]=swap;
-            }
-
-        }
-        //交换K
-        k=a[i];
-        a[i]=a[low];
-        a[low]=k;
-
-        //对左边进行排序,递归算法
-        sort(a, 0, i-1);
-        //对右边进行排序
-        sort(a,i+1,height);
-    }
-
+    /**
+     * 尝试缩小一半的时间，去遍历数组
+     * @param A
+     * @return
+     */
     public int[] sortedSquares1(int[] A) {
+        int [] temp = new int[A.length];
+        int N = A.length;
 
-        for (int i=0; i<A.length;i++){
+        int j= 0;
 
-            A[i] =  A[i] * A[i];
+        while (j < N && A[j] < 0){
+            j++;
+        }
+        int i = j-1;
+
+        int t=0;
+        while (i>=0 && j < N){
+            if (A[i] *A[i] < A[j] * A[j]){
+                temp[t++] = A[i] * A[i];
+                i--;
+            }else {
+                temp[t++] = A[j] * A[j];
+                j++;
+            }
+        }
+        while (i >= 0) {
+            temp[t++] = A[i] * A[i];
+            i--;
+        }
+        while (j < N) {
+            temp[t++] = A[j] * A[j];
+            j++;
         }
 
-       sort(A);
-        return A;
+        return temp;
     }
     public int[] sortedSquares(int[] A) {
 
