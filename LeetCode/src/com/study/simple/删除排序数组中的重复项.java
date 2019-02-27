@@ -1,5 +1,8 @@
 package com.study.simple;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * Created by IntelliJ IDEA.
  *
@@ -27,12 +30,43 @@ public class 删除排序数组中的重复项 {
 
     }
 
+    public int removeDuplicates2(int[] nums) {
+        Set<Integer> integers = new HashSet<>();
+
+
+        for (int i=0;i <nums.length;i++){
+            integers.add(nums[i]);
+        }
+
+        return integers.size();
+
+    }
+
     public static void main(String[] args) {
 
 
         删除排序数组中的重复项 aa = new 删除排序数组中的重复项();
         int []nums =new int[]{1,1,2};
+        int[] temp = nums;
+        for (int i =0; i< nums.length;i++){
+            System.out.printf("%s ",nums[i]);
+
+        }
         int a = aa.removeDuplicates(nums);
+        System.out.println();
+        for (int i=0; i< a;i++){
+            System.out.printf("%s  ",nums[i]);
+        }
+
+        System.out.println();
+        for (int i =0; i< temp.length;i++){
+            System.out.printf("%s ",temp[i]);
+
+        }
+        System.out.println();
         System.out.println(a);
+
+        System.out.println();
+        System.out.println(aa.removeDuplicates2(nums));
     }
 }
