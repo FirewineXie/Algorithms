@@ -14,7 +14,6 @@ import java.lang.reflect.Array;
 /**
  * @version : 1.0
  * @auther : Firewine
- * @email ： xyjworkgame@163.com
  * @Program Name: item
  * @Create : 2019/10/31
  */
