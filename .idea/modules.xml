@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AlgorithmBook/AlgorithmBook.iml" filepath="$PROJECT_DIR$/AlgorithmBook/AlgorithmBook.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AlgorithmClass/AlgorithmClass.iml" filepath="$PROJECT_DIR$/AlgorithmClass/AlgorithmClass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Codewars/Codewars.iml" filepath="$PROJECT_DIR$/Codewars/Codewars.iml" />
       <module fileurl="file://$PROJECT_DIR$/LeetCode/LeetCode.iml" filepath="$PROJECT_DIR$/LeetCode/LeetCode.iml" />
       <module fileurl="file://$PROJECT_DIR$/LintCode/LintCode.iml" filepath="$PROJECT_DIR$/LintCode/LintCode.iml" />
     </modules>
