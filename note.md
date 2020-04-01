@@ -1,6 +1,7 @@
 # 1. 排序
 
-**下面的代码基本都是使用Comparable 接口，使用这个接口实现了主键的抽象，它给出了实现这个接口数据类型的对象的大小顺序的定义。**
+**下面的代码基本都是使用Comparable
+接口，使用这个接口实现了主键的抽象，它给出了实现这个接口数据类型的对象的大小顺序的定义。**
 
 **但是，不是每次都要使用这个接口，因为数组元素的主键很可能只是每个元素的一小部分**
 
@@ -24,14 +25,19 @@
                  exch(a,i,min);
              }
         }
-   
+    public static void exch(Comparable[] a, int i,int j ){
+        Comparable t = a[i];
+        a[i] = a[j];
+        a[j] = t;
+    } 
    ```
 
 ## 2. 插入排序
 
 1. 插入排序就是你将每一张牌插入到已经有序的牌中的适当位置
 2. 但是在将其余所有元素在插入之前都向右移动一位
-3. 与上面的==选择排序 不同==的是， 插入排序所需的时间取决于**输入元素中元素的初始顺序**
+3. 与上面的==选择排序 不同==的是，
+   插入排序所需的时间取决于**输入元素中元素的初始顺序**
 4. 所以通过上述的得到：插入排序对应非随机数组的排序，效率会更好
 
 ```java
@@ -48,7 +54,7 @@
     }
 ```
 
-5. 要大幅度提高插入排序的速度 的方法： 只需要在内循环中将较大的元素都向右移动而不总是交换两个元素(这样访问数组的次数就能减少一半)
+5. 要大幅度提高插入排序的速度 的方法： 只需 减少一半)
 
 ```java
   public static void sort2(Comparable[] a){
@@ -69,12 +75,11 @@
 ```
 
 
-
 ## 3. 希尔排序
 
 1. 希尔排序是==**基于插入排序**==的快速的排序算法
 2. 希尔排序为了加快速度简单的地改进了插入排序，交换不相邻的元素以对数组的局部进行排序，并最终用插入排序将局部有序的数组排序
-3.  相当于分组排序
+3. 相当于分组排序
 
 ```java
  public static void sort(Comparable[] a){
@@ -96,11 +101,14 @@
 ```
 
 
-
 ## 4. 归并排序
 
 1. 归并排序 ： 可以先将它分成两半分别排序，然后再将结果归并起来，
-2. 当然最吸引人的地方是 ： 它能够保证将任意长度为N的数组排序所需时间和<a href="https://www.codecogs.com/eqnedit.php?latex=N\log&space;N" target="_blank"><img src="https://latex.codecogs.com/gif.latex?N\log&space;N" title="N\log N" /></a>成正比，
+2. 当然最吸引人的地方是 ： 它能够保证将任意长度为N的数组排序所需时间和<a
+   href="https://www.codecogs.com/eqnedit.php?latex=N\log&space;N"
+   target="_blank"><img
+   src="https://latex.codecogs.com/gif.latex?N\log&space;N" title="N\log
+   N" /></a>成正比，
 3. 主要缺点是： 它所需的额外空间和N成正比
 4. 归并排序分为==自顶向下==和==自底向上==的两种方法，
 5. 在归并排序中利用了高效算法中的分治思想，，，这是其中最典型的例子
@@ -150,7 +158,6 @@ class Merge {
 ```
 
 
-
 ```java
 //自底向上
 class MergeBU {
@@ -189,10 +196,9 @@ class MergeBU {
 ```
 
 
-
-6. 上面这个两个方法，，的临界值是  当数组长度为2的幂时，两种归并所用的比较次数和数组访问次数正好相同，只是顺序不同，
+6. 上面这个两个方法，，的临界值是
+   当数组长度为2的幂时，两种归并所用的比较次数和数组访问次数正好相同，只是顺序不同，
 7. 而且自底向上的排序比较适合链表组织的数据
-
 
 
 ## 5. 快速排序
@@ -200,7 +206,7 @@ class MergeBU {
 1. 快速排序是实现简单，使用于各种不同的输入数据且在一般应用中比其他排序算法都要快的多，
 2. 快速排序也是一种分治的排序算法，
 3. 在快速排序，，，你可以使用很多的辅助的方法，去实行快速排
-   1.  原地切分
+   1. 原地切分
    2. 别越界
    3. 保持随机性
    4. 终止循环
@@ -253,7 +259,6 @@ class MergeBU {
 ```
 
 
-
 4. 算法的改进
    1. 切换到插入排序
    2. 三取样切分
@@ -287,16 +292,11 @@ class Quick3way{
 ```
 
 
-
 ## 6. 优先队列
 
-1. 不是每个程序，都需要排序整个数组，或许有那么多只需要查找最大的元素，，在这种的情况下，一个合适的数据结构应该支持 两种操作 ： 删除最大元素和插入元素。
+1. 不是每个程序，都需要排序整个数组，或许有那么多只需要查找最大的元素，，在这种的情况下，一个合适的数据结构应该支持
+   两种操作 ： 删除最大元素和插入元素。
 2. 而优先队列最重要的操作就是***删除最大元素***和***插入元素***
-
-
-
-
-
 
 
 ### 1. API
@@ -305,9 +305,8 @@ class Quick3way{
 
 2. 关联索引的泛型优先队列的API --- IndexMinPQ
 
-   1. 这个结构  可以能够快速访问其中最小元素的数组，
+   1. 这个结构 可以能够快速访问其中最小元素的数组，
    2. 它能够快速访问数组的一个特定子集中的最小元素(指所有被插入的元素)
-
 
 
 ### 2. 堆
@@ -321,11 +320,12 @@ class Quick3way{
 3. **当一颗二叉树的每个结点都大于等于它的两个子结点，可说这个堆有序**
 
 #### 2. 一些特殊的代码实现
+
 1. 基于堆的优先队列
 
    ```java
    package com.sort.priority.queue;
-   
+
    /**
     * Created by IntelliJ IDEA.
     *
@@ -337,10 +337,10 @@ class Quick3way{
     * @Description :  基于堆的优先队列
     */
    public class MaxPQ<key extends Comparable<key>> {
-   
+
        private key[] pq;
        private int N = 0;
-   
+
        public MaxPQ(int maxN){
            pq = (key[]) new Comparable[maxN +1];
        }
@@ -364,13 +364,13 @@ class Quick3way{
        private boolean less(int i,int j){
            return pq[i].compareTo(pq[j] ) < 0;
        }
-   
+
        private void exch(int i,int j){
            key t = pq[i];
            pq[i] = pq[j];
            pq[j] = t;
        }
-   
+
        /**
         * 由下至上的堆有序化
         * @param k
@@ -380,7 +380,7 @@ class Quick3way{
                exch(k/2,k);
            }
        }
-   
+
        /**
         * 由上之下的堆有序化
         * @param k
@@ -399,21 +399,20 @@ class Quick3way{
            }
        }
    }
-   
+
    ```
 
-   
 
    5. 索引优先队列用例 ---使用优先队列的==多项归并==
 
       ```java
       package com.sort.priority.queue;
-      
-      
+
+
       import edu.princeton.cs.algs4.In;
       import edu.princeton.cs.algs4.IndexMinPQ;
       import edu.princeton.cs.algs4.StdOut;
-      
+
       /**
        * Created by IntelliJ IDEA.
        *
@@ -425,12 +424,12 @@ class Quick3way{
        * @Description :
        */
       public class Multiway {
-      
+
           public static void merge(In[] streams) {
-      
+
               int N = streams.length;
               IndexMinPQ<String> pq = new IndexMinPQ<>(N);
-      
+
               for (int i = 0; i < N; i++) {
                   if (!streams[i].isEmpty()) {
                       pq.insert(i, streams[i].readString());
@@ -444,9 +443,9 @@ class Quick3way{
                   }
               }
           }
-      
+
           public static void main(String[] args) {
-              
+
               int N = args.length;
               In[] streams = new In[N];
               for (int i=0;i<N;i++){
@@ -455,10 +454,9 @@ class Quick3way{
               merge(streams);
           }
       }
-      
+
       ```
 
-      
 
 # 2. 索引对比框图
 
@@ -551,6 +549,7 @@ class Quick3way{
 </table>
 
 ## 2. 优先队列
+
  <table>
 <thead>
 <tr>
@@ -807,8 +806,6 @@ class Quick3way{
 </tr>
 </tbody>
 </table>
-
-
 
 
 # 工具类

@@ -9,3 +9,9 @@
 
 ## 3. LintCode
 1. [地址](LintCode)
+2. 
+## 3. dataStructur(数据结构)
+1. [地址](dataStructure)
+
+## 3. AlgorithmExam(算法笔试)
+1. [地址](AlgorithmExam)
