@@ -37,7 +37,7 @@ public class code23 {
     }
 
     public static void main(String[] args) {
-        int n =6;
+        int n =8;
 
         code23 demo = new code23();
 

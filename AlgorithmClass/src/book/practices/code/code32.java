@@ -43,11 +43,10 @@ public class code32 {
             for (int j = 1; j<bLen+1;j++){
                 if (n.charAt(i - 1) == m.charAt(j - 1)) {
                     dp[i][j] = dp[i - 1][j - 1];
+                    System.out.println(i+"-"+j+"->" + dp[i][j]);
                 }else {
                     dp[i][j] = Math.min(dp[i - 1][j - 1], Math.min(dp[i - 1][j], dp[i][j - 1])) + 1;
-                   System.out.println(Math.min(dp[i - 1][j], dp[i][j - 1]) + "    " +
-                            Math.min(dp[i - 1][j - 1], Math.min(dp[i - 1][j], dp[i][j - 1]))  +
-                            " "+i+j+" ->" + dp[i][j]);
+                   System.out.println(i+"-"+j+" ->" + dp[i][j]);
                 }
             }
         }
@@ -58,8 +57,8 @@ public class code32 {
     public static void main(String[] args) {
 
         code32 demo = new code32();
-        String n = "qwert";
-        String m = "wertq";
+        String n = "fxpimu";
+        String m = "xwrs";
         demo.solve(n,m);
 
 
