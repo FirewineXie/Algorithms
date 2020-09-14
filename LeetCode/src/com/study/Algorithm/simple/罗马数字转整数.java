@@ -43,7 +43,7 @@ public class 罗马数字转整数 {
         int   number = 0;
         for (int i = 0; i < s.length(); ++i) {
 
-//            System.out.println(contrast.get(array[i]));
+//            System.out.println(contrast.get(第1章_数组[i]));
             int val = contrast.get(array[i]);
 
             if (i == s.length() - 1 || contrast.get(array[i+1]) <= contrast.get(array[i])){

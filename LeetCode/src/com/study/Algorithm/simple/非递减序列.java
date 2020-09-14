@@ -9,7 +9,7 @@ package com.study.Algorithm.simple;
  * @Create : 2020/3/15
  * @Description :
  *
- *  非递减数列 定义 ：  对于数组中所有的 i (1 <= i < n)，满足 array[i] <= array[i + 1]。
+ *  非递减数列 定义 ：  对于数组中所有的 i (1 <= i < n)，满足 第1章_数组[i] <= 第1章_数组[i + 1]。
  */
 public class 非递减序列 {
     /**
