@@ -9,7 +9,7 @@
 
 ## 3. LintCode
 1. [地址](LintCode)
-2. 
+
 ## 3. dataStructur(数据结构)
 1. [地址](dataStructure)
 
