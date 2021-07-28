@@ -6,11 +6,11 @@ package com.study.Algorithm.simple;
  * @version : 1.0
  * @auther : Firewine
  * @mail ： xyjworkgame@163.com
- * @Program Name: 移除元素
+ * @Program Name: 移除元素_27
  * @Create : 2019/7/19
  * @Description :
  */
-public class 移除元素 {
+public class 移除元素_27 {
 
     public int removeElement(int[] nums, int val) {
 
@@ -30,7 +30,7 @@ public class 移除元素 {
         int[] a = new int[]{1 , 0 ,2, 2, 3, 4, 5, 0};
         int val  =2;
 
-        移除元素 pp = new 移除元素();
+        移除元素_27 pp = new 移除元素_27();
         System.out.println(pp.removeElement(a, val));
     }
 }
