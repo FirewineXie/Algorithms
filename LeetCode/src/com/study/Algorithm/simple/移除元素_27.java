@@ -5,7 +5,7 @@ package com.study.Algorithm.simple;
  *
  * @version : 1.0
  * @auther : Firewine
- * @mail ： xyjworkgame@163.com
+ * @mail ： 
  * @Program Name: 移除元素_27
  * @Create : 2019/7/19
  * @Description :

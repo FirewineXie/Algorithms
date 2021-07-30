@@ -1,7 +1,7 @@
 package com.study.Algorithm.simple;
 
 /**
- * @author XYJ
+ * @author Firewine
  * @version 1.0.0
  * @ClassName 对称二叉树_101
  * @createTime: 2021年07月29日 10:18:02

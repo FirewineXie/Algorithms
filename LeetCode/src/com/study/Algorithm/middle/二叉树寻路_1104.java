@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Stack;
 
 /**
- * @author XYJ
+ * @author Firewine
  * @version 1.0.0
  * @ClassName 二叉树寻路_1104
  * @createTime: 2021年07月29日 08:56:16
