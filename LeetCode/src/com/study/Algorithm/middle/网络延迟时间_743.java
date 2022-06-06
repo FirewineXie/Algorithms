@@ -3,7 +3,7 @@ package com.study.Algorithm.middle;
 import java.util.Arrays;
 
 /**
- * @author XYJ
+ * @author Firewine Xie
  * @version 1.0.0
  * @ClassName 网络延迟时间_743
  * @createTime: 2021年08月02日 09:03:14
