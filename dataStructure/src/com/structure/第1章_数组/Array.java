@@ -7,7 +7,6 @@ public class Array<E> {
 
     /**
      * 构造函数，传入数组的容量capacity构造Array
-     * @param capacity
      */
     public Array(int capacity){
         data = (E[])new Object[capacity];

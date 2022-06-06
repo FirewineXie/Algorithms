@@ -6,7 +6,7 @@ import java.util.List;
  * @author Firewine
  * @version 1.0.0
  * @ClassName Question82
- * @createTime: 2022年06月06日 20:03:02
+ * @createTime 2022年06月06日 20:03:02
  * @Description TODO
  */
 public class Question82 {
@@ -31,27 +31,24 @@ public class Question82 {
 
     public ListNode deleteDuplicates(ListNode head) {
 
-        // 节点数为一，或者零，返回head
-        if (head.next == null) {
+        if (head == null || head.next == null) {
             return head;
         }
 
-        ListNode result = new ListNode();
-        ListNode resultN = result;
-        while (true) {
-            if (head.next != null) {
-                if (head.val == head.next.val) {
-                    head = head.next;
-                } else {
-                    resultN.val = head.val;
-                    resultN.next = new ListNode();
-                    resultN = resultN.next;
-                    head = head.next;
-                }
-            } else {
-                break;
+        ListNode next = head.next;
+
+
+        // 2. 内部出现问题
+        if (head.val == next.val) {
+            // 1. 头出现问题，
+            while (next != null && head.val == next.val) {
+                next = next.next;
             }
+            //2
+            head = deleteDuplicates(next);
+        } else {
+            head.next = deleteDuplicates(next);
         }
-        return result.next;
+        return head;
     }
 }

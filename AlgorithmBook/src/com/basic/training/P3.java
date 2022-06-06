@@ -1,6 +1,6 @@
 package com.basic.training;
 
-import org.omg.Messaging.SYNC_WITH_TRANSPORT;
+
 
 import java.io.IOException;
 import java.util.Scanner;
