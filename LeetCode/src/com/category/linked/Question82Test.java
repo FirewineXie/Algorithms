@@ -1,7 +1,6 @@
 package com.category.linked;
 
 
-import org.testng.annotations.Test;
 
 /**
  * @author Firewine
