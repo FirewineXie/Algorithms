@@ -89,7 +89,7 @@ public class Question92 {
         return dummyNode.next;
     }
 
-    private void reverseLinkedList(ListNode head) {
+    public void reverseLinkedList(ListNode head) {
         // 也可以使用递归反转一个链表
         ListNode pre = null;
         ListNode cur = head;

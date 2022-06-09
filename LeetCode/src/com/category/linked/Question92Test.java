@@ -30,6 +30,6 @@ class Question92Test {
         list2.next = list3;
         list1.next = list2;
 
-        question92.reverseLinkedListDfs(list1);
+        question92.reverseLinkedList(list1);
     }
 }
