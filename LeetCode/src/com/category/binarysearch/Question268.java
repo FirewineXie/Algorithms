@@ -23,8 +23,6 @@ public class Question268 {
             }
         }
         return n;
-
-
     }
 
 }
