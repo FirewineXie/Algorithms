@@ -1,5 +1,6 @@
 package com.category.tree;
 
+import java.util.ArrayDeque;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -11,7 +12,7 @@ import java.util.Queue;
  * @Description TODO
  */
 public class Question513 {
-    class TreeNode {
+    static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
@@ -31,25 +32,20 @@ public class Question513 {
     }
 
     public int findBottomLeftValue(TreeNode root) {
-        Queue<TreeNode> queue = new LinkedList<>();
-        TreeNode ans = null;
-
-        queue.add(root);
-        int depth = 1;
-        while (queue.size() != 0) {
-
-
-            for (int i = 0; i < queue.size(); i++) {
-                TreeNode poll = queue.poll();
-                if (i == 0) {
-                    ans = poll;
-                }
-                queue.add(poll.left);
-                queue.add(poll.right);
-                depth++;
+        int ret = 0;
+        Queue<TreeNode> queue = new ArrayDeque<TreeNode>();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            TreeNode p = queue.poll();
+            if (p.right != null) {
+                queue.offer(p.right);
             }
+            if (p.left != null) {
+                queue.offer(p.left);
+            }
+            ret = p.val;
         }
-        return ans.val;
+        return ret;
     }
 
 }
