@@ -1,7 +1,5 @@
 package com.category.binarysearch;
 
-import com.study.Algorithm.simple.Solution;
-
 /**
  * @author Firewine
  * @version 1.0.0
