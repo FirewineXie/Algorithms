@@ -9,6 +9,14 @@ package com.category.dp;
  */
 public class Question91 {
 
+    /**
+     * 限界条件
+     * s[i] < 10   条件  1 < i < s.length
+     * 10 <= s[j] <= 26 条件  1 < i  < s.length
+     *
+     * @param s
+     * @return
+     */
     public int numDecodings(String s) {
         int n = s.length();
         // a = f[i-2], b = f[i-1], c=f[i]
