@@ -27,29 +27,19 @@ public class Jz22 {
      */
     public ListNode FindKthToTail(ListNode pHead, int k) {
 
-        if (pHead.next == null) {
-            return pHead;
-        }
-        ListNode pLink = pHead;
-
-        int sum = 0;
-
-        while (pHead != null) {
-
-            sum++;
-            pHead = pHead.next;
-            if (k == sum) {
-                pLink = pLink.next;
-                sum = 0;
+        ListNode fast = pHead;
+        ListNode slow = pHead;
+        for (int i = 0; i < k; i++) {
+            if (fast == null){
+                return null;
             }
+            fast = fast.next;
         }
-
-        if (sum < k) {
-            return null;
+        while (fast != null) {
+            fast = fast.next;
+            slow = slow.next;
         }
-
-        return pLink;
-
+        return slow;
     }
 
 }
