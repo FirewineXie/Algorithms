@@ -1,8 +1,5 @@
 package com.item.structer;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * @author Firewine
  * @version 1.0.0
@@ -22,7 +19,31 @@ public class Jz35 {
     }
 
     public RandomListNode Clone(RandomListNode pHead) {
-
-
+        if (pHead == null) return null;
+        RandomListNode cur = pHead;
+        while (cur != null) {
+            RandomListNode copyNode = new RandomListNode(cur.label);
+            copyNode.next = cur.next;
+            cur.next = copyNode;
+            cur = cur.next.next;
+        }
+        cur = pHead;
+        while (cur != null) {
+            if (cur.random != null) cur.next.random = cur.random.next;
+            cur = cur.next.next;
+        }
+        cur = pHead;
+        RandomListNode copyHead = cur.next, temp = copyHead;
+        while (cur != null) {
+            if (cur.next != null) {
+                cur.next = cur.next.next;
+                cur = cur.next;
+            }
+            if (temp.next != null) {
+                temp.next = temp.next.next;
+                temp = temp.next;
+            }
+        }
+        return copyHead;
     }
 }
